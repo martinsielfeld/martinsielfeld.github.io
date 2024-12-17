@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Menú superior */
+        /* Menú superior y barra final */
         .navbar, .footer-bar {
             display: flex;
             justify-content: space-between;
@@ -44,7 +44,6 @@
             color: #f0db4f;
         }
 
-        /* Barra inferior */
         .footer-bar {
             justify-content: center;
             font-size: 14px;
@@ -53,6 +52,35 @@
         /* Contenido principal */
         .content {
             padding: 40px;
+        }
+
+        /* Primera fila con dos columnas */
+        .row {
+            display: flex;
+            margin-bottom: 40px; /* Espacio entre filas */
+        }
+
+        .column40 {
+            width: 40%;
+            padding: 10px;
+        }
+
+        .column60 {
+            width: 60%;
+            padding: 10px;
+        }
+
+        /* Imagen en la primera columna */
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Bordes redondeados */
+        }
+
+        /* Segunda fila */
+        .full-row {
+            width: 100%;
+            padding: 10px;
         }
     </style>
 </head>
@@ -70,14 +98,34 @@
 
     <!-- Contenido principal -->
     <div class="content">
-        <h1>Main</h1>
-        <p>Bienvenido a la sección principal de mi página.</p>
+        <!-- Primera fila: dos columnas -->
+        <div class="row">
+            <div class="column40">
+                <img src="https://via.placeholder.com/400" alt="Mi Imagen" class="image">
+            </div>
+            <div class="column60">
+                <h2>Sobre Mí</h2>
+                <p>
+                    ¡Hola! Soy Martin Sielfeld. Bienvenido a mi página personal. 
+                    Aquí encontrarás información sobre mi trabajo, mi investigación y mis publicaciones. 
+                    Explora las secciones para saber más.
+                </p>
+            </div>
+        </div>
+
+        <!-- Segunda fila: texto completo -->
+        <div class="full-row">
+            <h2>Bienvenido</h2>
+            <p>
+                Esta es la página principal de mi sitio web. Desde aquí puedes navegar a diferentes secciones usando el menú superior. 
+                Explora mi currículum, mis investigaciones y mi blog para conocer más sobre mis proyectos y trayectoria.
+            </p>
+        </div>
     </div>
 
     <!-- Barra final -->
     <div class="footer-bar">
-        
+    
     </div>
 </body>
 </html>
-
