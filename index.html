@@ -6,9 +6,15 @@
     <title>Martin Sielfeld</title>
     <style>
         /* Estilos generales */
-        body {
+        html, body {
             margin: 0;
             font-family: Arial, sans-serif;
+            height: 100%; /* Asegura que la altura de la página sea 100% */
+        }
+
+        /* Contenedor principal para el contenido */
+        .content {
+            min-height: calc(100vh - 60px); /* Resta la altura de la barra final */
         }
 
         /* Estilo del menú y la barra final */
@@ -17,7 +23,7 @@
             justify-content: space-between;
             align-items: center;
             background: linear-gradient(to right, #42D092, #1179BA);
-            padding: 20px 20px; /* Aumenté la altura del menú */
+            padding: 20px 20px; /* Altura de las barras */
             color: white;
         }
 
@@ -36,10 +42,6 @@
             padding: 0;
         }
 
-        .navbar .menu li {
-            display: inline;
-        }
-
         .navbar .menu a {
             text-decoration: none;
             color: white;
@@ -47,13 +49,16 @@
         }
 
         .navbar .menu a:hover {
-            color: #f0db4f; /* Color amarillo al pasar el mouse */
+            color: #f0db4f;
         }
 
         /* Barra al final de la página */
         .footer-bar {
-            justify-content: center; /* Centra el contenido */
+            justify-content: center;
             font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -69,30 +74,32 @@
         </ul>
     </nav>
 
-    <!-- Contenido de ejemplo -->
-    <section id="main" style="padding: 20px;">
-        <h1>Main</h1>
-        <p>Bienvenido a la sección principal.</p>
-    </section>
+    <!-- Contenido principal -->
+    <div class="content">
+        <section id="main" style="padding: 20px;">
+            <h1>Main</h1>
+            <p>Bienvenido a la sección principal.</p>
+        </section>
 
-    <section id="resume" style="padding: 20px;">
-        <h1>Resume</h1>
-        <p>Esta es tu sección de Resume.</p>
-    </section>
+        <section id="resume" style="padding: 20px;">
+            <h1>Resume</h1>
+            <p>Esta es tu sección de Resume.</p>
+        </section>
 
-    <section id="research" style="padding: 20px;">
-        <h1>Research</h1>
-        <p>Contenido relacionado con tu investigación.</p>
-    </section>
+        <section id="research" style="padding: 20px;">
+            <h1>Research</h1>
+            <p>Contenido relacionado con tu investigación.</p>
+        </section>
 
-    <section id="blog" style="padding: 20px;">
-        <h1>Blog</h1>
-        <p>Publicaciones de tu blog aparecerán aquí.</p>
-    </section>
+        <section id="blog" style="padding: 20px;">
+            <h1>Blog</h1>
+            <p>Publicaciones de tu blog aparecerán aquí.</p>
+        </section>
+    </div>
 
     <!-- Barra final -->
     <div class="footer-bar">
-        © 2024 Martin Sielfeld. Todos los derechos reservados.
     </div>
 </body>
 </html>
+
