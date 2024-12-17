@@ -1,7 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Sielfeld</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo del menú */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        /* Nombre a la izquierda */
+        .navbar .name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Botones a la derecha */
+        .navbar .menu {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .menu li {
+            display: inline;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .navbar .menu a:hover {
+            color: #f0db4f; /* Color amarillo al pasar el mouse */
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Menú principal -->
+    <nav class="navbar">
+        <div class="name">MARTIN SIELFELD</div>
+        <ul class="menu">
+            <li><a href="#main">Main</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de ejemplo -->
+    <section id="main" style="padding: 20px;">
+        <h1>Main</h1>
+        <p>Bienvenido a la sección principal.</p>
+    </section>
+
+    <section id="resume" style="padding: 20px;">
+        <h1>Resume</h1>
+        <p>Esta es tu sección de Resume.</p>
+    </section>
+
+    <section id="research" style="padding: 20px;">
+        <h1>Research</h1>
+        <p>Contenido relacionado con tu investigación.</p>
+    </section>
+
+    <section id="blog" style="padding: 20px;">
+        <h1>Blog</h1>
+        <p>Publicaciones de tu blog aparecerán aquí.</p>
+    </section>
 </body>
 </html>
