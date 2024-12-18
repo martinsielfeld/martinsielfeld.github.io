@@ -111,24 +111,25 @@
         .slider {
             position: relative;
             width: 100%;
-            max-width: 800px; /* Width of the slider */
-            height: 300px; /* Fixed height for the slider */
-            overflow: hidden; /* Hide overflow */
-            margin: 0 auto;
+            max-width: 800px; /* Slider width */
+            height: 300px; /* Fixed height */
+            overflow: hidden;
+            margin: 0 auto; /* Center slider */
             border-radius: 8px;
+            background: #f0f0f0; /* Optional background */
         }
 
         .slides {
             display: flex;
-            width: 400%; /* 4 images (100% each) */
-            animation: slide 20s infinite;
+            width: 400%; /* 4 images */
+            animation: slide 20s infinite; /* Smooth animation */
         }
 
         .slides img {
             width: 100%; /* Fill slider width */
             height: 100%; /* Fill slider height */
-            object-fit: contain; /* Fit images without cropping */
-            flex-shrink: 0;
+            object-fit: contain; /* Ensure the entire image fits within the slider */
+            flex-shrink: 0; /* Prevent shrinking */
         }
 
         /* Keyframes: Each image lasts 5 seconds */
