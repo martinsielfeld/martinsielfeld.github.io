@@ -107,26 +107,25 @@
         /* Image Slider */
         .slider {
             position: relative;
-            width: 100%;
-            max-width: 800px; /* Slider width */
-            height: 300px; /* Fixed height */
+            width: 100%; /* Ajusta el ancho */
+            max-width: 600px; /* Máximo ancho del slider */
+            height: 400px; /* Altura fija */
             overflow: hidden;
-            margin: 0 auto; /* Center slider */
+            margin: 0 auto; /* Centra el slider */
             border-radius: 8px;
-            background: #f0f0f0; /* Optional background */
+            background: #f0f0f0;
         }
 
+        /* Imágenes del slider */
         .slides {
             display: flex;
-            width: 400%; /* 4 images */
-            animation: slide 20s infinite; /* Smooth animation */
+            transition: transform 0.5s ease-in-out;
         }
 
         .slides img {
-            width: 100%; /* Fill slider width */
-            height: 100%; /* Fill slider height */
-            object-fit: contain; /* Ensure the entire image fits within the slider */
-            flex-shrink: 0; /* Prevent shrinking */
+            width: 100%; /* Ajusta al ancho del contenedor */
+            height: 100%; /* Ajusta a la altura del contenedor */
+            object-fit: scale-down; /* Ajusta proporcionalmente */
         }
 
         /* Keyframes: Each image lasts 5 seconds */
@@ -191,10 +190,10 @@
             <div class="column">
                 <div class="slider">
                     <div class="slides">
-                        <img src="img/imagen1.png" alt="Imagen 1" width="400" height="300" style="object-fit: cover;">
-                        <img src="img/imagen2.png" alt="Imagen 2" width="400" height="300" style="object-fit: cover;">
-                        <img src="img/imagen3.png" alt="Imagen 3" width="400" height="300" style="object-fit: cover;">
-                        <img src="img/imagen4.png" alt="Imagen 4" width="400" height="300" style="object-fit: cover;">
+                        <img src="img/imagen1.png" alt="Imagen 1">
+                        <img src="img/imagen2.png" alt="Imagen 2">
+                        <img src="img/imagen3.png" alt="Imagen 3">
+                        <img src="img/imagen4.png" alt="Imagen 4">
                     </div>
                 </div>
             </div>
