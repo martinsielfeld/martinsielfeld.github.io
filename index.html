@@ -109,7 +109,7 @@
             position: relative;
             width: 100%;
             max-width: 800px; /* Slider width */
-            height: 300px; /* Fixed height */
+            height: 533px; /* Fixed height */
             overflow: hidden;
             margin: 0 auto; /* Center slider */
             border-radius: 8px;
@@ -133,15 +133,15 @@
         @keyframes slide {
             0% { transform: translateX(0); }       /* First Image */
             25% { transform: translateX(0); }      /* Hold for 5s */
-            30% { transform: translateX(-100%); }  /* Transition to 2nd Image */
+            30% { transform: translateX(-25%); }  /* Transition to 2nd Image */
 
-            50% { transform: translateX(-100%); }  /* Hold for 5s */
-            55% { transform: translateX(-200%); }  /* Transition to 3rd Image */
+            50% { transform: translateX(-25%); }  /* Hold for 5s */
+            55% { transform: translateX(-50%); }  /* Transition to 3rd Image */
 
-            75% { transform: translateX(-200%); }  /* Hold for 5s */
-            80% { transform: translateX(-300%); }  /* Transition to 4th Image */
+            75% { transform: translateX(-50%); }  /* Hold for 5s */
+            80% { transform: translateX(-100%); }  /* Transition to 4th Image */
 
-            100% { transform: translateX(-300%); } /* Hold for 5s and reset */
+            100% { transform: translateX(-100%); } /* Hold for 5s and reset */
         }
     </style>
 </head>
