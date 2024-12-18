@@ -110,27 +110,28 @@
         /* Image Slider */
         .slider {
             position: relative;
-            width: 100%; /* Full width */
-            max-width: 800px; /* Optional: Limit the slider width */
-            aspect-ratio: 16 / 9; /* Ensures responsive height based on width */
-            overflow: hidden;
-            border-radius: 8px;
+            width: 100%;
+            max-width: 800px; /* Control the slider width */
+            height: 300px; /* Fixed height for the slider */
+            overflow: hidden; /* Hide overflow */
+            border-radius: 8px; /* Rounded corners */
             margin: 0 auto; /* Center the slider */
-            background: #f0f0f0; /* Optional: Background color for padding areas */
+            background-color: #f0f0f0; /* Optional background color */
         }
 
         .slides {
             display: flex;
-            width: 400%; /* 4 images, 100% each */
-            animation: slide 20s infinite;
+            width: 400%; /* Total width for 4 images */
+            animation: slide 20s infinite; /* Animation for 4 images */
         }
 
         .slides img {
-            flex: 1; /* Makes each image take equal space */
-            object-fit: cover; /* Ensures the image fills the container without distortion */
-            object-position: center; /* Centers the image */
+            width: 100%; /* Make each image fill its container horizontally */
+            height: 100%; /* Make images take the full slider height */
+            object-fit: cover; /* Crop to fit without distortion */
+            flex-shrink: 0; /* Prevent image shrinking */
         }
-
+        
         /* Keyframes: Each image lasts 5 seconds */
         @keyframes slide {
             0% { transform: translateX(0); }       /* First Image */
