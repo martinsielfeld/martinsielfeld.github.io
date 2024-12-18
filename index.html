@@ -110,11 +110,13 @@
         /* Image Slider */
         .slider {
             position: relative;
-            width: 100%; /* Adjust the width of the slider */
-            height: 250px; /* Fixed height for the slider */
+            width: 100%; /* Full width */
+            max-width: 800px; /* Optional: Set a max width for the slider */
+            height: 300px; /* Fixed height for the slider */
             overflow: hidden;
             border-radius: 8px;
             background: #f0f0f0; /* Optional: Background color for padding areas */
+            margin: 0 auto; /* Center the slider */
         }
 
         .slides {
@@ -124,11 +126,15 @@
         }
 
         .slides img {
-            width: 100%; /* Make the images fit the slider's width */
-            height: 100%; /* Ensure the images fit the slider's height */
-            object-fit: cover; /* Crop the images to fill the area without stretching */
+            width: 100%; /* Fit to the width of the slider */
+            height: 100%; /* Fit to the height of the slider */
+            object-fit: contain; /* Ensure the whole image is visible */
             flex-shrink: 0;
+            background: #fff; /* Optional: Add background color around images */
+            padding: 10px; /* Optional: Add space around images */
+            box-sizing: border-box; /* Ensures padding doesn't affect size */
         }
+
 
         /* Keyframes: Each image lasts 5 seconds */
         @keyframes slide {
