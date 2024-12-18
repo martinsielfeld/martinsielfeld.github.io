@@ -68,6 +68,12 @@
             margin-bottom: 40px; /* Espacio entre filas */
         }
 
+        .column {
+            flex: 1;
+            padding: 20px;
+            width: 50%;
+        }
+
         .column40 {
             width: 40%;
             padding: 30px;
@@ -113,7 +119,7 @@
         .slides {
             display: flex;
             width: 400%; /* 4 images */
-            animation: slide 8s infinite;
+            animation: slide 20s infinite; /* 5s per image */
         }
 
         .slides img {
@@ -123,10 +129,10 @@
         }
 
         @keyframes slide {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-100%); }
+            50%, 70% { transform: translateX(-200%); }
+            75%, 95% { transform: translateX(-300%); }
             100% { transform: translateX(0); }
         }
 
@@ -177,10 +183,10 @@
             <div class="column">
                 <div class="slider">
                     <div class="slides">
-                        <img src="images/imagen1.jpg" alt="Imagen 1">
-                        <img src="images/imagen2.jpg" alt="Imagen 2">
-                        <img src="images/imagen3.jpg" alt="Imagen 3">
-                        <img src="images/imagen4.jpg" alt="Imagen 4">
+                        <img src="img/imagen1.jpg" alt="Imagen 1">
+                        <img src="img/imagen2.jpg" alt="Imagen 2">
+                        <img src="img/imagen3.jpg" alt="Imagen 3">
+                        <img src="img/imagen4.jpg" alt="Imagen 4">
                     </div>
                 </div>
             </div>
