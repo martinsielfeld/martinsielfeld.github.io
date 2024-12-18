@@ -107,43 +107,41 @@
         /* Image Slider */
         .slider {
             position: relative;
-            width: 100%; /* Ancho del contenedor */
-            max-width: 600px; /* Tamaño máximo */
-            height: 400px; /* Altura fija */
+            width: 100%;
+            max-width: 800px; /* Slider width */
+            height: 300px; /* Fixed height */
             overflow: hidden;
-            margin: 0 auto; /* Centrado */
+            margin: 0 auto; /* Center slider */
             border-radius: 8px;
-            background: #f0f0f0;
+            background: #f0f0f0; /* Optional background */
         }
 
-        /* Carrusel de imágenes */
         .slides {
             display: flex;
-            width: 400%; /* Para 4 imágenes */
-            animation: slide 12s infinite; /* Duración total de la animación */
+            width: 400%; /* 4 images */
+            animation: slide 20s infinite; /* Smooth animation */
         }
 
-        /* Imágenes dentro del slider */
         .slides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block; /* Elimina el espacio en blanco */
+            width: 100%; /* Fill slider width */
+            height: 100%; /* Fill slider height */
+            object-fit: contain; /* Ensure the entire image fits within the slider */
+            flex-shrink: 0; /* Prevent shrinking */
         }
 
-        /* Keyframes para la animación */
+        /* Keyframes: Each image lasts 5 seconds */
         @keyframes slide {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(0); } /* Mantén la 1era imagen */
-            30% { transform: translateX(-100%); } /* Mueve a la 2da imagen */
+            0% { transform: translateX(0); }       /* First Image */
+            25% { transform: translateX(0); }      /* Hold for 5s */
+            30% { transform: translateX(-100%); }  /* Transition to 2nd Image */
 
-            50% { transform: translateX(-100%); }
-            55% { transform: translateX(-200%); } /* Mueve a la 3era imagen */
+            50% { transform: translateX(-100%); }  /* Hold for 5s */
+            55% { transform: translateX(-200%); }  /* Transition to 3rd Image */
 
-            75% { transform: translateX(-200%); }
-            80% { transform: translateX(-300%); } /* Mueve a la 4ta imagen */
+            75% { transform: translateX(-200%); }  /* Hold for 5s */
+            80% { transform: translateX(-300%); }  /* Transition to 4th Image */
 
-            100% { transform: translateX(-300%); } /* Reinicia */
+            100% { transform: translateX(-300%); } /* Hold for 5s and reset */
         }
     </style>
 </head>
