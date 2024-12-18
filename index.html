@@ -111,30 +111,25 @@
         .slider {
             position: relative;
             width: 100%; /* Full width */
-            max-width: 800px; /* Optional: Set a max width for the slider */
-            height: 300px; /* Fixed height for the slider */
+            max-width: 800px; /* Optional: Limit the slider width */
+            aspect-ratio: 16 / 9; /* Ensures responsive height based on width */
             overflow: hidden;
             border-radius: 8px;
-            background: #f0f0f0; /* Optional: Background color for padding areas */
             margin: 0 auto; /* Center the slider */
+            background: #f0f0f0; /* Optional: Background color for padding areas */
         }
 
         .slides {
             display: flex;
-            width: 400%; /* 4 images */
+            width: 400%; /* 4 images, 100% each */
             animation: slide 20s infinite;
         }
 
         .slides img {
-            width: 100%; /* Fit to the width of the slider */
-            height: 100%; /* Fit to the height of the slider */
-            object-fit: contain; /* Ensure the whole image is visible */
-            flex-shrink: 0;
-            background: #fff; /* Optional: Add background color around images */
-            padding: 10px; /* Optional: Add space around images */
-            box-sizing: border-box; /* Ensures padding doesn't affect size */
+            flex: 1; /* Makes each image take equal space */
+            object-fit: cover; /* Ensures the image fills the container without distortion */
+            object-position: center; /* Centers the image */
         }
-
 
         /* Keyframes: Each image lasts 5 seconds */
         @keyframes slide {
