@@ -111,26 +111,27 @@
         .slider {
             position: relative;
             width: 100%;
-            max-width: 800px; /* Control the slider width */
-            height: 300px; /* Fixed height for the slider */
-            overflow: hidden; /* Hide overflow */
-            border-radius: 8px; /* Rounded corners */
+            max-width: 800px; /* Optional: limit the width */
+            height: 300px; /* Fixed height */
+            overflow: hidden;
             margin: 0 auto; /* Center the slider */
-            background-color: #f0f0f0; /* Optional background color */
+            border-radius: 8px; /* Optional: rounded corners */
+            background: #f0f0f0; /* Optional: background color */
         }
 
         .slides {
             display: flex;
-            width: 400%; /* Total width for 4 images */
-            animation: slide 20s infinite; /* Animation for 4 images */
+            width: calc(100% * 4); /* 4 images */
+            animation: slide 20s infinite; /* Slider animation */
         }
 
         .slides img {
-            width: 100%; /* Make each image fill its container horizontally */
-            height: 100%; /* Make images take the full slider height */
-            object-fit: cover; /* Crop to fit without distortion */
-            /*flex-shrink: 0; /* Prevent image shrinking */
+            width: 100%; /* Scale to slider width */
+            height: 100%; /* Fill the container height */
+            object-fit: cover; /* Crop image to fit while maintaining aspect ratio */
+            flex-shrink: 0; /* Prevent shrinking */
         }
+
 
         /* Keyframes: Each image lasts 5 seconds */
         @keyframes slide {
