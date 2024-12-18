@@ -100,6 +100,48 @@
             margin-top: 0; /* Elimina el margen superior */
             padding-top: 0; /* Asegura que no haya padding superior */
         }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slides {
+            display: flex;
+            width: 400%; /* 4 images */
+            animation: slide 8s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Social Icons */
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f0db4f;
+        }
     </style>
 </head>
 <body>
@@ -125,18 +167,31 @@
                 <h1>Hello!</h1>
                 <p align="justify">My name is Martin Sielfeld, and I'm a predoc research fellow at Yale University's Tobin Center for Economic Policy. My research experience revolves around the Economics of Education, specifically in information asymmetries, digitalization, and competition. I'm also interested in Industrial Organization and urban economics.</p>
                 <p align="justify">I got my Master's in Economics from Universidad Adolfo Ibáñez in 2021. Since then, I have participated in research projects in many parts of Latin America, the Caribbean, Europe, and the US. This exposure to a broad set of educational settings allowed me to gather knowledge about common problems. At the same time, this experience also taught me how algorithms and new technology could solve or attenuate specific issues, such as information friction, resource allocation, and financial efficiency.</p>
-                <p align="justify"><b>Contact information</b><br>martn.sielfeld@yale.edu / masielfeld@gmail.com<br>+1 203 823 5832<br> <a href="https://github.com/tuusuario" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://linkedin.com/in/tuusuario" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="https://twitter.com/tuusuario" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a></p>
+                <p align="justify"><b>Contact information</b><br>martn.sielfeld@yale.edu / masielfeld@gmail.com<br>+1 203 823 5832<br><div class="social-icons"></div><a href="https://github.com/tuusuario" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://linkedin.com/in/tuusuario" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="https://twitter.com/tuusuario" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a></div></p>
             </div>
         </div>
 
-        <!-- Segunda fila: texto completo -->
-        <div class="full-row">
-            <h2>Bienvenido</h2>
-            <p>
-                Esta es la página principal de mi sitio web. Desde aquí puedes navegar a diferentes secciones usando el menú superior. 
-                Explora mi currículum, mis investigaciones y mi blog para conocer más sobre mis proyectos y trayectoria.
-            </p>
+        <!-- Segunda fila con imagen slider y texto -->
+        <div class="row">
+            <!-- Columna con el slider -->
+            <div class="column">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/imagen1.jpg" alt="Imagen 1">
+                        <img src="images/imagen2.jpg" alt="Imagen 2">
+                        <img src="images/imagen3.jpg" alt="Imagen 3">
+                        <img src="images/imagen4.jpg" alt="Imagen 4">
+                    </div>
+                </div>
+            </div>
+            <!-- Columna con texto -->
+            <div class="column">
+                <h2>Galería de Imágenes</h2>
+                <p>Esta sección muestra una galería de imágenes que se desplazan automáticamente de derecha a izquierda. Aquí puedes agregar más imágenes o información relacionada con tu trabajo y proyectos.</p>
+            </div>
         </div>
+    </div>
+
     </div>
 
     <!-- Barra final -->
