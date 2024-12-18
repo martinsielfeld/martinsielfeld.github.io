@@ -107,53 +107,43 @@
         /* Image Slider */
         .slider {
             position: relative;
-            width: 100%; /* Ajusta el ancho */
-            max-width: 600px; /* Máximo ancho del slider */
+            width: 100%; /* Ancho del contenedor */
+            max-width: 600px; /* Tamaño máximo */
             height: 400px; /* Altura fija */
             overflow: hidden;
-            margin: 0 auto; /* Centra el slider */
+            margin: 0 auto; /* Centrado */
             border-radius: 8px;
             background: #f0f0f0;
         }
 
-        /* Imágenes del slider */
+        /* Carrusel de imágenes */
         .slides {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            width: 400%; /* Para 4 imágenes */
+            animation: slide 12s infinite; /* Duración total de la animación */
         }
 
+        /* Imágenes dentro del slider */
         .slides img {
-            width: 100%; /* Ajusta al ancho del contenedor */
-            height: 100%; /* Ajusta a la altura del contenedor */
-            object-fit: scale-down; /* Ajusta proporcionalmente */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; /* Elimina el espacio en blanco */
         }
 
-        /* Keyframes: Each image lasts 5 seconds */
+        /* Keyframes para la animación */
         @keyframes slide {
-            0% { transform: translateX(0); }       /* First Image */
-            25% { transform: translateX(0); }      /* Hold for 5s */
-            30% { transform: translateX(-100%); }  /* Transition to 2nd Image */
+            0% { transform: translateX(0); }
+            25% { transform: translateX(0); } /* Mantén la 1era imagen */
+            30% { transform: translateX(-100%); } /* Mueve a la 2da imagen */
 
-            50% { transform: translateX(-100%); }  /* Hold for 5s */
-            55% { transform: translateX(-200%); }  /* Transition to 3rd Image */
+            50% { transform: translateX(-100%); }
+            55% { transform: translateX(-200%); } /* Mueve a la 3era imagen */
 
-            75% { transform: translateX(-200%); }  /* Hold for 5s */
-            80% { transform: translateX(-300%); }  /* Transition to 4th Image */
+            75% { transform: translateX(-200%); }
+            80% { transform: translateX(-300%); } /* Mueve a la 4ta imagen */
 
-            100% { transform: translateX(-300%); } /* Hold for 5s and reset */
-        }
-
-        /* Social Icons */
-        .social-icons a {
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #f0db4f;
+            100% { transform: translateX(-300%); } /* Reinicia */
         }
     </style>
 </head>
