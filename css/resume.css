@@ -109,7 +109,6 @@ h3 {
 .button {
     border-radius: 50px;
     background-color: linear-gradient(to right, #42D092, #1179BA);
-    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
