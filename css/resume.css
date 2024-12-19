@@ -51,7 +51,7 @@ body {
 /* Primera fila con dos columnas */
 .row {
     display: flex;
-    margin-bottom: 40px; /* Espacio entre filas */
+    margin-bottom: 10px; /* Espacio entre filas */
 }
 
 .row2 {
