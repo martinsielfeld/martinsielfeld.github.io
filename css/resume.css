@@ -54,6 +54,10 @@ body {
     margin-bottom: 40px; /* Espacio entre filas */
 }
 
+.row2 {
+    display: flex;
+}
+
 .column {
     flex: 1;
     width: 50%;
