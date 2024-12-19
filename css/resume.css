@@ -105,12 +105,6 @@ h3 {
     line-height: 0.8em;
 }
 
-ul {
-    margin-top: 0; /* Elimina el margen superior */
-    margin-bottom: 0; /* Elimina el margen superior */
-    padding-top: 0; /* Asegura que no haya padding superior */
-}
-
 /* Image Slider */
 .slider {
     position: relative;
