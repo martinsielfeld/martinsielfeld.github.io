@@ -100,10 +100,9 @@ h1 {
 }
 
 h3 {
-    margin-top: 0; /* Elimina el margen superior */
-    padding-top: 0; /* Asegura que no haya padding superior */
-    margin-bottom: 0; /* Elimina el margen superior */
-    padding-bottom: 0; /* Asegura que no haya padding superior */
+    margin: 0;
+    padding: 0;
+    line-height: 0.8em;
 }
 
 ul {
