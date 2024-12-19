@@ -56,7 +56,6 @@ body {
 
 .column {
     flex: 1;
-    padding: 50px;
     width: 50%;
 }
 
