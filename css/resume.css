@@ -104,6 +104,12 @@ h3 {
     padding-top: 0; /* Asegura que no haya padding superior */
 }
 
+ul {
+    margin-top: 0; /* Elimina el margen superior */
+    margin-bottom: 0; /* Elimina el margen superior */
+    padding-top: 0; /* Asegura que no haya padding superior */
+}
+
 /* Image Slider */
 .slider {
     position: relative;
