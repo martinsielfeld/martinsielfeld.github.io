@@ -125,6 +125,16 @@ h3 {
     background: linear-gradient(to right, #1179BA, #42D092); /* Reverse gradient */
 }
 
+/* Refs */
+a:link {
+    color: black;
+    background-color: transparent;
+  }
+  a:hover {
+    color: #1179BA;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
 /* Image Slider */
 .slider {
