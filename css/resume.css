@@ -114,6 +114,7 @@ h3 {
     line-height: 0.8em;
 }
 
+/* Buttons */
 .button {
     border-radius: 50px;
     background: linear-gradient(to right, #42D092, #1179BA); /* Fixed gradient syntax */

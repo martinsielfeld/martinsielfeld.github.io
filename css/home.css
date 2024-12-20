@@ -94,6 +94,25 @@ h1 {
     padding-top: 0; /* Asegura que no haya padding superior */
 }
 
+/* Buttons */
+.button {
+    border-radius: 50px;
+    background: linear-gradient(to right, #42D092, #1179BA); /* Fixed gradient syntax */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none; /* Optional: Remove default border */
+    cursor: pointer; /* Add a pointer cursor */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.button:hover {
+    background: linear-gradient(to right, #1179BA, #42D092); /* Reverse gradient */
+}
+
 /* Image Slider */
 .slider {
     position: relative;
