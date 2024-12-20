@@ -46,6 +46,7 @@ body {
 /* Contenido principal */
 .content {
     padding: 40px;
+    max-width: 2880px;
 }
 
 /* Primera fila con dos columnas */
