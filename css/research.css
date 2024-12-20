@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Use Poppins as the general font */
+    color: #333; /* Optional: set a default text color */
+}
+
+/* Menú superior y barra final */
+.navbar, .footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #42D092, #1179BA);
+    padding: 20px;
+    color: white;
+}
+
+.navbar .name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar .menu a:hover {
+    color: #f0db4f;
+}
+
+.footer-bar {
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* Contenido principal */
+.content {
+    padding: 40px;
+    max-width: 2880px;
+}
+
+/* Primera fila con dos columnas */
+.row {
+    display: flex;
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.row2 {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    width: 20%;
+}
+
+.column20 {
+    width: 20%;
+    padding: 30px;
+}
+
+.column80 {
+    width: 80%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Imagen en la primera columna */
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Segunda fila */
+.full-row {
+    width: 100%;
+    padding: 10px;
+}
+
+p {
+    line-height: 1.6; /* Adjust this value as needed (e.g., 1.6, 1.8, 2) */
+    margin-bottom: 10px; /* Optional: Add a bit of space between paragraphs */
+}
+
+h1 {
+    margin-top: 0; /* Elimina el margen superior */
+    padding-top: 0; /* Asegura que no haya padding superior */
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    line-height: 0.8em;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    line-height: 0.8em;
+}
+
+.button {
+    border-radius: 50px;
+    background: linear-gradient(to right, #42D092, #1179BA); /* Fixed gradient syntax */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none; /* Optional: Remove default border */
+    cursor: pointer; /* Add a pointer cursor */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.button:hover {
+    background: linear-gradient(to right, #1179BA, #42D092); /* Reverse gradient */
+}
+
+
+/* Image Slider */
+.slider {
+    position: relative;
+    max-width: 800px; /* Slider width */
+    height: auto;
+    width: 100%;
+    height: 400px; /* Fixed height */
+    overflow: hidden;
+    margin: 0 auto; /* Center slider */
+    border-radius: 8px;
+    background: white; /* Fondo blanco */
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* 4 images */
+    animation: slide 20s infinite; /* Smooth animation */ 
+    background: white; /* Fondo blanco */
+}
+
+.slides img {
+    width: 25%; /* Fill slider width */
+    height: 100%; /* Fill slider height */
+    object-fit: contain; /* Ensure the entire image fits within the slider */
+    flex-shrink: 0; /* Prevent shrinking */
+    background: #f0f0f0; /* Optional background */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .slider {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+}
+
+/* Keyframes: Each image lasts 5 seconds */
+@keyframes slide {
+    0% { transform: translateX(0); }       /* First Image */
+    25% { transform: translateX(0); }      /* Hold for 5s */
+    30% { transform: translateX(-25%); }  /* Transition to 2nd Image */
+
+    50% { transform: translateX(-25%); }  /* Hold for 5s */
+    55% { transform: translateX(-50%); }  /* Transition to 3rd Image */
+
+    75% { transform: translateX(-50%); }  /* Hold for 5s */
+    80% { transform: translateX(-75%); }  /* Transition to 4th Image */
+
+    100% { transform: translateX(-75%); } /* Hold for 5s and reset */
+}
