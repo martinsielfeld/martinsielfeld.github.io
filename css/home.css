@@ -124,9 +124,6 @@ h1 {
     margin: 0 auto; /* Center slider */
     border-radius: 8px;
     background: white; /* Fondo blanco */
-    border: 2px solid black; /* Adjust the width as needed */
-    padding: 5px; /* Optional, adds space between the border and the content */
-    box-sizing: border-box; /* Ensures padding and border don't affect the size */
 }
 
 .slides {
